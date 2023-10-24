@@ -1,12 +1,12 @@
 <template>
-    <div class="container lp-section">
+    <div class="container lp-section" :data-cms-bind="dataBinding">
         <div class="row lp-hero-banner">
             <div class="col">
                 <h1 class="main-headline">Reclaim your health</h1>
                 <p class="sub-headline">Life without Type 2 diabetes is possible. Now you can safely
                     reduce or eliminate Type 2 diabetes medications and shed unwanted weight with<br>the Twin Health
                     program. <br><br>Twin Health is a new pilot program* offered by Blue Care Network.</p>
-                    <LandingCta></LandingCta>
+                    <!-- <LandingCta></LandingCta> -->
             </div>
             <div class="col">
                 <iframe
@@ -21,6 +21,14 @@
     </div>
 </template>
   
+<script>
+   export default {
+      props: [
+         'block','dataBinding'
+      ]
+   }
+</script>
+
 <style scoped>
 .lp-section {
     max-width: 1200px;

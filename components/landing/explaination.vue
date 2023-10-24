@@ -1,5 +1,5 @@
 <template>
-    <div class="lp-section">
+    <div class="lp-section" :data-cms-bind="dataBinding">
         <h1 class="section-header">How the Twin Health program works</h1>
         <div class="three-column">
             <div class="how-it-works__content-block">
@@ -37,6 +37,14 @@
     </div>
 </template>
   
+<script>
+   export default {
+      props: [
+         'block','dataBinding'
+      ]
+   }
+</script>
+
 <style scoped>
 .lp-section {
     max-width: 1200px;
